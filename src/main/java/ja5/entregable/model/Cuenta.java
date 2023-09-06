@@ -17,5 +17,7 @@ public class Cuenta {
     private Long id;
     private String String;
     private BigDecimal saldo;
+    private Boolean estado;
+
 
 }

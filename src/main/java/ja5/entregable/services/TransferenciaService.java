@@ -15,11 +15,11 @@ public class TransferenciaService {
 
 
     public Transferencia save(Transferencia transferencia){
-        return TransferenciaRepository.save(transferencia);
+        return transferenciaRepository.save(transferencia);
     }
 
     public Transferencia update(Transferencia transferencia){
-        return TransferenciaRepository.save(transferencia);
+        return transferenciaRepository.save(transferencia);
     }
 
     public void delete(Long id){
