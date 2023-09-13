@@ -1,6 +1,7 @@
 package ja5.entregable.model;
 
 import jakarta.persistence.*;
+import lombok.Builder;
 import lombok.Data;
 
 
@@ -10,16 +11,17 @@ import java.util.Date;
 
 @Entity
 @Data
+@Builder
 public class Transferencia {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     @JoinColumn(name = "cuenta_origen_id")
     private Cuenta cuentaOrigen;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     @JoinColumn(name = "cuenta_destino_id")
     private Cuenta cuentaDestino;
 

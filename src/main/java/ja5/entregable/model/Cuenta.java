@@ -10,14 +10,12 @@ import java.math.BigDecimal;
 
 @Entity
 @Data
-
 public class Cuenta {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-    private String String;
+    @GeneratedValue (strategy = GenerationType.IDENTITY)
+    private  Long id;
+    private String numeroCuenta;
     private BigDecimal saldo;
     private Boolean estado;
-
 
 }
